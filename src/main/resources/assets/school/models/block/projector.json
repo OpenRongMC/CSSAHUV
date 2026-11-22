@@ -1,0 +1,9 @@
+{
+  "parent": "school:custom/projector",
+  "textures": {
+    "all": "school:block/projectornewa",
+    "particle": "school:block/projectornewa",
+    "0": "school:block/projectornewa"
+  },
+  "render_type": "solid"
+}

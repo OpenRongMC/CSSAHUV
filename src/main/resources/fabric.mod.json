@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "rongmc_school",
+  "version": "${version}",
+  "name": "Chinese-style school as well as home",
+  "description": "Fabric 26.3 port of CSSAHUV (Chinese-style school as well as home). Upstream Forge 1.20.1 by 江竹雨offical / Noel-Cornehl. Ported by RongMC.",
+  "authors": [
+    "江竹雨offical",
+    "Noel-Cornehl",
+    "RongMC"
+  ],
+  "contact": {
+    "sources": "https://github.com/bii20081Aztec/CSSAHUV",
+    "homepage": "https://space.bilibili.com/1685065897"
+  },
+  "license": "GPL-3.0",
+  "icon": "logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.xbtstudio.school.SchoolMod"
+    ],
+    "client": [
+      "net.xbtstudio.school.SchoolModClient"
+    ]
+  },
+  "depends": {
+    "minecraft": "~26.3",
+    "fabricloader": ">=0.20.1",
+    "fabric-api": "*",
+    "java": ">=25"
+  },
+  "provides": [
+    "school"
+  ]
+}

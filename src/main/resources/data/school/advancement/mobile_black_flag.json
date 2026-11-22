@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "school:mobileblack"
+    },
+    "title": {
+      "translate": "advancements.mobile_black_flag.title"
+    },
+    "description": {
+      "translate": "advancements.mobile_black_flag.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "mobile_black_flag_0": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "school:mobileblack"
+        }
+      }
+    }
+  },
+  "parent": "school:computer_time",
+  "requirements": [
+    [
+      "mobile_black_flag_0"
+    ]
+  ]
+}

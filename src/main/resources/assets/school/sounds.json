@@ -1,0 +1,36 @@
+{
+  "shoot": {
+    "subtitle": "subtitles.shoot",
+    "sounds": [
+      {
+        "name": "school:m870-shoot",
+        "stream": false
+      }
+    ]
+  },
+  "smgshoot": {
+    "subtitle": "subtitles.smgshoot",
+    "sounds": [
+      {
+        "name": "school:chalksmg-shoot",
+        "stream": false
+      }
+    ]
+  },
+  "abletennistabl": {
+    "sounds": [
+      {
+        "name": "school:crash",
+        "stream": false
+      }
+    ]
+  },
+  "aaio": {
+    "sounds": [
+      {
+        "name": "school:sf_express",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version '1.19.4'
+}
+
+group = 'net.xbtstudio'
+version = '0.90.9-rongmc.2+26.3'
+
+base {
+	archivesName = 'rongmc-school'
+}
+
+repositories {
+	maven { url 'https://maven.fabricmc.net/' }
+	mavenCentral()
+}
+
+loom {
+	mods {
+		"school" {
+			sourceSet sourceSets.main
+		}
+	}
+}
+
+dependencies {
+	minecraft 'com.mojang:minecraft:26.3'
+	implementation 'net.fabricmc:fabric-loader:0.20.1'
+	implementation 'net.fabricmc.fabric-api:fabric-api:0.166.2+26.3'
+}
+
+java {
+	toolchain.languageVersion = JavaLanguageVersion.of(25)
+}
+
+processResources {
+	inputs.property 'version', project.version
+	filesMatching('fabric.mod.json') {
+		expand 'version': project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	options.encoding = 'UTF-8'
+	options.compilerArgs += ['-Xmaxerrs', '5000']
+}

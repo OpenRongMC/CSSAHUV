@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "school:item/spring"
+  },
+  "render_type": "translucent"
+}

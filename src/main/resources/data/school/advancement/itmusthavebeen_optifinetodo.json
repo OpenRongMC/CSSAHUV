@@ -1,0 +1,34 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "id": "school:itmusthavebeen_optifinetodoit"
+    },
+    "title": {
+      "translate": "advancements.itmusthavebeen_optifinetodo.title"
+    },
+    "description": {
+      "translate": "advancements.itmusthavebeen_optifinetodo.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "itmusthavebeen_optifinetodo_0": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "school:itmusthavebeen_optifinetodoit"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "itmusthavebeen_optifinetodo_0"
+    ]
+  ]
+}

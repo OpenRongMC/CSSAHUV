@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "school:tv"
+    },
+    "title": {
+      "translate": "advancements.tvas.title"
+    },
+    "description": {
+      "translate": "advancements.tvas.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tvas_0": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "school:notv"
+        }
+      }
+    }
+  },
+  "parent": "school:computer_time",
+  "requirements": [
+    [
+      "tvas_0"
+    ]
+  ]
+}

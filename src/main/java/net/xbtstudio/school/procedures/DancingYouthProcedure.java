@@ -1,0 +1,32 @@
+package net.xbtstudio.school.procedures;
+
+import net.xbtstudio.school.network.SchoolModVariables;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+
+public class DancingYouthProcedure {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, net.minecraft.server.permissions.LevelBasedPermissionSet.forLevel(net.minecraft.server.permissions.PermissionLevel.byId(4)), Component.literal(""), _level.getServer()).withSuppressedOutput(),
+					"playsound yin_yue_tai:wu_dong_qing_chun music @a");
+		{
+			double _setval = 6;
+			net.xbtstudio.school.CapabilityAccess.get(entity, SchoolModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.sound = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		if (entity instanceof Player _player)
+			if (_player instanceof net.minecraft.server.level.ServerPlayer _sp) _sp.closeContainer();
+	}
+}

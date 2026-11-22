@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "school:crttv"
+    },
+    "title": {
+      "translate": "advancements.crttv_3.title"
+    },
+    "description": {
+      "translate": "advancements.crttv_3.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crttv_3_0": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "school:nocrttv"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "school:tvas",
+  "requirements": [
+    [
+      "crttv_3_0"
+    ]
+  ]
+}
