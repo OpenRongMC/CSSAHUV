@@ -1,27 +1,38 @@
-# CSSAHUV（Chinese-style school as well as home）
+# 中式学校及家庭（CSSAHUV）
 
-上游为 Forge 1.20.1 模组 **Chinese-style school as well as home**（作者：江竹雨offical / Noel-Cornehl），提供中式校园与家居向建筑内容（大量方块、若干实体/音效等）。
+简体中文 · [English](./README.en.md)
 
-本仓库是 RongMC 将其迁到 **Fabric · Minecraft 26.3** 的移植树。
+把原 Forge 1.20.1 模组的中式校园与家庭内容移植到 Fabric 26.3，包含课桌椅、教室设备、家庭装饰、实体及交互菜单。资源和世界方块使用 school 命名空间。
 
----
+## 下载与安装
 
-## RongMC · Minecraft 26.3 Fabric 移植说明
+- 版本 · [v0.90.9-rongmc.2+26.3](https://github.com/OpenRongMC/CSSAHUV/releases/tag/v0.90.9-rongmc.2%2B26.3) (已发布)
+- 下载文件 · `rongmc-school-0.90.9-rongmc.2.26.3.jar`
+- 运行环境 · Minecraft Java 26.3, Fabric, Java 25
+- Fabric Loader · `>=0.20.1`
+- Fabric 模组 ID · `rongmc_school`
+- JAR 声明的依赖 · [Fabric API](https://modrinth.com/mod/fabric-api)
 
-本仓库是 RongMC 维护的 **Minecraft 26.3 / Fabric / Java 25** 移植构建，不是上游官方发行渠道。
+把发行 JAR 放入对应实例的 `mods/` 目录。联机两端安装同一版本。旧 Forge 存档先复制再测试，尤其检查交互方块、实体与结构模板。
 
-### 与原版的主要差异
-- 加载器从 Forge 改为 Fabric；游戏版本到 26.3。
-- Fabric id：`rongmc_school`（provides `school`）；资源命名空间仍为 `school`。
-- 注册体量大（数百方块/物品），启动与进世界成本高于一般装饰模组。
+## 如何验证
 
-### 已知问题 / 限制
-- 从 Forge 迁移的结构/能力未必与原版 Forge 行为 100% 一致（容器、实体 AI、结构模板等需按 26.3 实测）。
-- 旧 Forge 存档直接迁过来**不保证**方块 ID 与数据兼容。
-- 上游若无公开完整 README，功能细节以游戏内创造页签与资源名为准。
+专用服可试放课桌、希沃一体机和投影机，打开实验室柜子并确认连接保持。移植版验证过 school:ner 模板加载。其他旧玩法仍需逐项核对。
 
-### 构建与安装
-- Fabric mod id：`rongmc_school`（`provides`：`school`，旧依赖名一般仍可解析）
-- Release 产物见本仓库 Releases（jar 名带 `rongmc-` 前缀）
-- 许可证：本仓以 **GPL-3.0** 发布（见 `LICENSE`）；请同时尊重上游原作者条款与署名
+## 从源码开始
 
+```sh
+./gradlew tasks
+```
+
+先用 Java 25 检查当前源码树提供的任务，再选择对应的构建任务。
+
+## 文档与反馈
+
+- [原 README（旧版指南、贡献者与署名）](https://github.com/OpenRongMC/CSSAHUV/blob/50d415766fa9be05fe43f2e33bafa6da8b5cd7d0/README.md)
+- [上游项目与文档](https://github.com/bii20081Aztec/CSSAHUV)
+- [报告 RongMC 移植问题](https://github.com/OpenRongMC/CSSAHUV/issues) · 请附游戏版本、两端 JAR 文件名、复现步骤和相关日志。
+
+## 许可与署名
+
+请参阅本仓库的 [LICENSE](./LICENSE) 及原项目的许可、署名和第三方资源说明。
