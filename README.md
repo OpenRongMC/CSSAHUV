@@ -2,37 +2,21 @@
 
 简体中文 · [English](./README.en.md)
 
-把原 Forge 1.20.1 模组的中式校园与家庭内容移植到 Fabric 26.3，包含课桌椅、教室设备、家庭装饰、实体及交互菜单。资源和世界方块使用 school 命名空间。
 
-## 下载与安装
+《中式学校及家庭》由江竹雨offical / Noel-Cornehl 创作。从课桌、椅子和讲台搭起中式教室，用希沃一体机、投影机与实验室柜子补全场景，也可以用家居装饰布置住宅。模组还有猫等实体和可交互的设施。
 
-- 版本 · [v0.90.9-rongmc.2+26.3](https://github.com/OpenRongMC/CSSAHUV/releases/tag/v0.90.9-rongmc.2%2B26.3) (已发布)
-- 下载文件 · `rongmc-school-0.90.9-rongmc.2.26.3.jar`
-- 运行环境 · Minecraft Java 26.3, Fabric, Java 25
-- Fabric Loader · `>=0.20.1`
-- Fabric 模组 ID · `rongmc_school`
-- JAR 声明的依赖 · [Fabric API](https://modrinth.com/mod/fabric-api)
+## RongMC 26.3 版本的改动
 
-把发行 JAR 放入对应实例的 `mods/` 目录。联机两端安装同一版本。旧 Forge 存档先复制再测试，尤其检查交互方块、实体与结构模板。
+将 Forge 的注册、交互菜单和网络调用适配到 Fabric。修复希沃一体机模型循环、投影机缺贴图、结构模板路径及实验室柜子打开时的菜单解码。
 
-## 如何验证
+## 安装
 
-专用服可试放课桌、希沃一体机和投影机，打开实验室柜子并确认连接保持。移植版验证过 school:ner 模板加载。其他旧玩法仍需逐项核对。
+在 [GitHub Releases](https://github.com/OpenRongMC/CSSAHUV/releases/tag/v0.90.9-rongmc.2%2B26.3) 下载 **v0.90.9-rongmc.2+26.3**。使用 Minecraft Java **26.3**、**Fabric** 和 **Java 25**。 依赖 [Fabric API](https://modrinth.com/mod/fabric-api)。 将发行 JAR 放进实例的 `mods/` 目录。 联机两端安装同一版本。旧 Forge 存档先复制再测试，尤其检查交互方块、实体与结构模板。
 
-## 从源码开始
+## 原项目
 
-```sh
-./gradlew tasks
-```
-
-先用 Java 25 检查当前源码树提供的任务，再选择对应的构建任务。
-
-## 文档与反馈
-
-- [原 README（旧版指南、贡献者与署名）](https://github.com/OpenRongMC/CSSAHUV/blob/50d415766fa9be05fe43f2e33bafa6da8b5cd7d0/README.md)
-- [上游项目与文档](https://github.com/bii20081Aztec/CSSAHUV)
-- [报告 RongMC 移植问题](https://github.com/OpenRongMC/CSSAHUV/issues) · 请附游戏版本、两端 JAR 文件名、复现步骤和相关日志。
+[中式学校及家庭（CSSAHUV）](https://github.com/bii20081Aztec/CSSAHUV)
 
 ## 许可与署名
 
-请参阅本仓库的 [LICENSE](./LICENSE) 及原项目的许可、署名和第三方资源说明。
+详见 [LICENSE](./LICENSE) 与原项目署名。
